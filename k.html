@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Galeri</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+        }
+
+        h1 {
+            background-color: #f0f0f0;
+            padding: 20px;
+           text-align: center; 
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 200px;
+            cursor: pointer;
+            border-radius: 5px
+        }
+
+        /* Lightbox overlay */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .lightbox-content {
+            position: relative;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 80%;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Random Galeri</h1>
+
+<div class="gallery">
+    <img src="ra/1.jpg" alt="Image 1" onclick="openLightbox(this.src)">
+    <img src="ra/2.jpg" alt="Image 2" onclick="openLightbox(this.src)">
+    <img src="ra/3.jpg" alt="Image 3" onclick="openLightbox(this.src)">
+    <img src="ra/4.jpg" alt="Image 4" onclick="openLightbox(this.src)">
+    <img src="ra/5.jpg" alt="Image 5" onclick="openLightbox(this.src)">
+    <img src="ra/6.jpg" alt="Image 6" onclick="openLightbox(this.src)">
+ <img src="ra/7.jpg" alt="Image 7" onclick="openLightbox(this.src)"> 
+ <img src="ra/8.jpg" alt="Image 8" onclick="openLightbox(this.src)">
+ <img src="ra/9.jpg" alt="Image 9" onclick="openLightbox(this.src)">
+ <img src="ra/10.jpg" alt="Image 10" onclick="openLightbox(this.src)">
+ <img src="ra/11.jpg" alt="Image 11" onclick="openLightbox(this.src)">
+ <img src="ra/12.jpg" alt="Image 12" onclick="openLightbox(this.src)">
+ <img src="ra/13.jpg" alt="Image 13" onclick="openLightbox(this.src)">
+ <img src="ra/14.jpg" alt="Image 14" onclick="openLightbox(this.src)">
+ <img src="ra/15.jpg" alt="Image 15" onclick="openLightbox(this.src)">
+ <img src="ra/16.jpg" alt="Image 16" onclick="openLightbox(this.src)">
+ <img src="ra/r1.JPG" alt="Image 17" onclick="openLightbox(this.src)">
+ <img src="ra/r2.JPEG" alt="Image 18" onclick="openLightbox(this.src)">
+ <img src="ra/r3.JPEG" alt="Image 19" onclick="openLightbox(this.src)">
+ <img src="ra/r4.jpeg" alt="Image 20" onclick="openLightbox(this.src)">
+ <img src="ra/r5.JPEG" alt="Image 21" onclick="openLightbox(this.src)">
+ <img src="ra/r6.JPEG" alt="Image 22" onclick="openLightbox(this.src)">
+ <img src="ra/r7.jpeg" alt="Image 23" onclick="openLightbox(this.src)">
+ <img src="ra/r8.JPEG" alt="Image 24" onclick="openLightbox(this.src)">
+ <img src="ra/r9.JPEG" alt="Image 25" onclick="openLightbox(this.src)">
+ <img src="ra/r10.JPEG" alt="Image 26" onclick="openLightbox(this.src)">
+ <img src="ra/r11.JPEG" alt="Image 27" onclick="openLightbox(this.src)">
+ <img src="ra/r12.JPEG" alt="Image 28" onclick="openLightbox(this.src)">
+ <img src="ra/r13.JPEG" alt="Image 29" onclick="openLightbox(this.src)">
+ <img src="ra/r14.JPEG" alt="Image 30" onclick="openLightbox(this.src)">
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="">
+    </div>
+</div>
+
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').style.display = 'block';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

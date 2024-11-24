@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LDKO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            background-color: #f0f0f0;
+            padding: 20px;
+           text-align: center; 
+         }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 200px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* Lightbox overlay */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .lightbox-content {
+            position: relative;
+            margin: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 80%;
+        }
+
+        .lightbox-content img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Close button */
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h1>LDKO</h1>
+
+<div class="gallery">
+    <img src="l1/ldko1.JPEG" alt="Image 1" onclick="openLightbox(this.src)">
+    <img src="l1/ldko2.JPEG" alt="Image 2" onclick="openLightbox(this.src)">
+    <img src="l1/ldko3.JPG" alt="Image 3" onclick="openLightbox(this.src)">
+    <img src="l1/ldko4.JPEG" alt="Image 4" onclick="openLightbox(this.src)">
+ <img src="l1/ldko5.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko6.JPG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko7.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko8.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko9.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko10.JPG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko11.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko12.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko13.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko14.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko15.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+ <img src="l1/ldko16.JPG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldok17.JPG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldko18.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldko19.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldko20.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldko21.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldko22.JPG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldko23.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldko24.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldko26.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldko27.JPEG" alt="Image 5" onclick="openLightbox(this.src)">
+<img src="l1/ldko28.JPG" alt="Image 5" onclick="openLightbox(this.src)">
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <div class="lightbox-content">
+        <img id="lightbox-img" src="">
+    </div>
+</div>
+
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').style.display = 'block';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
